@@ -213,21 +213,17 @@
 #start{
   position: absolute;
   top: 85%;
-  left: 48%;
+  left: 45%;
 }
 #sec{
   position: absolute;
   top: 80%;
   left: 45%;
 }
-#out {
+#restart{
   position: absolute;
-  top: 50%;
-  left: 45%;
-  z-index: 200;
-  margin-top: -70px;
-  font-size: 47px;
-  color : rgba(200,10,150,0.75);
+  top: 85%;
+  left: 52%;
 }
   </style>
 </head>
@@ -244,6 +240,7 @@
   </ul>
   <input type="number" id ="sec"></input>
   <button id ="start" onclick = "start()">START</button>
+  <button id ="restart" onclick = "restart()">RESTART</button>
 
   <script >
 var x =0;
@@ -283,5 +280,12 @@ function start(){
   minus();
   }
 }
+function restart(){
+  if(times !=0){
+  document.getElementById("num").innerHTML = document.getElementById("sec").value;
+  return false;
+  }
+}
+
 	</script>
 </body>
